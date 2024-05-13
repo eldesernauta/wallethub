@@ -7,9 +7,9 @@ html {
 }
 
 ::selection {
-    background-color: black;
-    color: white;
-    text-shadow: 1px 1px 0px #23123A;
+    background-color: #57BD95;
+    color: #23123A;
+    text-shadow: 1px 1px 0px #fff;
 }
 
 /* IMPORT FONTS */
@@ -301,7 +301,7 @@ html {
 .credit__text::after {
     content: '✝';
     color: #373737;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 10px;
     align-self: flex-start;
 }
@@ -339,7 +339,7 @@ html {
 
 .credit__box--reviews {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .credit__flex--start {
@@ -359,7 +359,7 @@ html {
 .credit__subcontainer--flex {
     display: flex;
     justify-content: space-around;
-    align-items: start;
+    align-items: center;
 }
 
 .credit__flex--img {
@@ -369,7 +369,7 @@ html {
 .credit__flex--description {
     width: 50%;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     text-align: center;
     margin: 0;
@@ -387,13 +387,24 @@ html {
     background-color: #FA6E3D;
     border: 0;
     outline: 0;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     padding: 15px;
     border-radius: 5px;
+    transition: all 0.3s ease-in-out
+}
+
+.credit__button:hover {
+    background-color: #59D8D1;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out
 }
 
 .credit__button--desktop {
+    display: block;
+}
+
+.credit__conditional {
     display: block;
 }
 
@@ -411,9 +422,13 @@ html {
     font-size: 18px;
 }
 
-.credit__list li span {
+.credit__list .show {
     color: #1194F6;
     cursor: pointer;
+}
+
+.credit__list--hidden {
+    display: none;
 }
 
 .credit__button--mobile {
@@ -434,6 +449,10 @@ html {
     cursor: pointer;
 }
 
+
+/* END OF CREDIT SECTION */
+
+/* RESPONSIVE */
 @media only screen and (max-width:768px) {
     .nav--desktop {
         display: none;
@@ -445,6 +464,10 @@ html {
 
     .hero {
         min-height: 80vh;
+        background-image: url('./src/img/background-hero-mobile.png');
+        background-position: bottom center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .hero__text {
@@ -458,13 +481,14 @@ html {
     }
 
     .credit__text {
-        margin: 0px 30px;
+        margin: 0px 15px;
         font-size: 24px;
         display: block;
     }
 
     .credit__box {
-        padding: 30px;
+        position: relative;
+        padding: 25px 15px;
     }
 
 
@@ -497,9 +521,23 @@ html {
         margin: 20px 0;
     }
 
+    .credit__separator {
+        position: absolute;
+        bottom: 45px;
+        width: calc(100% + 15px);
+        left: -15px;
+    }
+
     .credit__button--mobile {
         display: block;
         width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .credit__conditional {
+        display: none;
     }
 
 }
+
+/* END OF RESPONSIVE */

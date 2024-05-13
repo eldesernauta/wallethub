@@ -71,7 +71,7 @@
                         <div class="credit__subcontainer--flex">
                             <img src="./src/img/credit-card.png" alt="credit card" class="credit__flex--img" />
                             <h6 class="credit__flex--description">
-                                Aproval<br />
+                                Aproval<br class="credit__conditional" />
                                 Odds<br /><br />
                                 <span>Very Good</span>
                             </h6>
@@ -84,8 +84,24 @@
                             <li>Get a $100 cash rewards bonus after you spend $500 in purchases
                                 in the first 90 days after account oppening.</li>
                             <li>Earn unlimited 1.5% cash rewards on every purcahse.</li>
-                            <li>Earn unlimited 1.5% cash rewards on every...<span>show more</span></li>
+                            <li>Earn unlimited 1.5% cash rewards on every... <span class="show" onclick="showfun()"
+                                    id="showbtn">Show
+                                    more</span></li>
+
                         </ul>
+                        <span class="credit__list--hidden" id="credit__moretext">
+                            <ul class="credit__list">
+                                <li>Earn unlimited 1.5% cash rewards on every purcahse.</li>
+                                <li>Get a $100 cash rewards bonus after you spend $500 in purchases
+                                    in the first 90 days after account oppening.</li>
+                                <li>Earn unlimited 1.5% cash rewards on every... </li>
+
+                                <span id="hidebtn" onclick="hidefun()" class="show credit__list--hidden">Show
+                                    less</span>
+
+                            </ul>
+
+                        </span>
                         <button class="credit__button credit__button--mobile">Apply Now</button>
                     </div>
                 </div>
@@ -97,6 +113,8 @@
             </div>
         </div>
     </section>
+
+    <script src="./functions.js" type="text/javascript"></script>
 
 </body>
 
