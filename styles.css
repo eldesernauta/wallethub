@@ -206,7 +206,6 @@ html {
 }
 
 .nav__menu-link:hover a {
-    color: white;
     transition: all 0.3s ease-in-out;
 }
 
@@ -287,7 +286,7 @@ html {
     justify-content: start;
     align-items: start;
     position: relative;
-    gap: 50px;
+    gap: 30px;
 }
 
 .credit__text {
