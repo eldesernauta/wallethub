@@ -1,4 +1,4 @@
-# Frontend Developer Test
+# WalletHub Frontend Developer Test
 
 This repository contains my submission for the Frontend Developer job opportunity assignment. The task was to recreate an Illustrator design into HTML and CSS.
 
